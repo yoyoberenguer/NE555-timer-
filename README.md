@@ -66,21 +66,23 @@ We can study the schematic from 4 different stages
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/schema.png)
 
 ### Voltage divider
-The voltage divider is made of 3 identical resistors R1, R2, R3 (value 5k) supply with a 5V DC power supply voltage 
-The input current going through the AOP AS358 is negligeable maximun few 100 nA, typical 20nA (low input bias current) via U1A (pin 2) & U1B (pin 5)
-on the diagram. Consequently, the current passing through R1, R2, R3 is identical. 
-The voltage applied on the pin 5 is the determine as follow (v+ the voltage on pin 5) and VCC = 5V
+The voltage divider is made of 3 identical resistors R1, R2, R3 (value 5k) supply with a 5V DC power supply voltage.
+The input current going through the AOP AS358 is negligeable (maximun few 100 nA, typical 20nA) via U1A (pin 2) & U1B (pin 5)
+
+Consequently, the current passing through R1, R2, R3 is identical. 
+The voltage applied on the pin 5 is the determine as follow (v+ voltage on pin 5 and v- voltage on pin 2) with VCC = 5V
 ```
 v+ = (R3 / (R3 + R2 + R1)) * VCC 
-v+ = 1/3 * VCC
+v+ = 1/3 * Vcc
 v+ = 1.667
 
 The voltage on pin 2 is : 
 v- = (R2 + R3) / (R1 + (R2 + R3)) 
-v- = 2/3 * VCC
+v- = 2/3 * Vcc
 v- = 3.334V
 ```
-
+These two voltages will be used with a capacitor charge and discharge, 1/3 Vcc and 2/3vcc will be the voltage extremum during 
+the charge and discharge of the capacitor C through the resistors (RA & RB)
 
 
 
