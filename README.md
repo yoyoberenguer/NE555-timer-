@@ -61,6 +61,6 @@ We can study the schematic from 4 different stages
 * 3 The RS flip-flop 
 * 4 Frequency analysis with C charge and discharge
 
-`Kicad Simplified schematic with additional leds`
+`Kicad NE555 Simplified schematic version with additional leds`
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/schema.png)
