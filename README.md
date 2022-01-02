@@ -91,7 +91,7 @@ amplifuers that can operates with a wide ranges of power supply voltages (in sin
 It as also a low input bias current of 20nA and low input offset voltages of 2mv, for those reasons a single 
 AS358 is used in the diagram for U1A & U1B. 
 The voltage supplied to the comparator is 0 - 5V and the output state will remain within the same range. 
-- Output is high (+5V) when V+ > V-  
+- Output is high (+5v) when V+ > V-  
 - Output is low (0v) when v+ < V- 
 
 
