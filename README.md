@@ -84,12 +84,22 @@ v- = 3.334V
 These two voltages will be used to control the charge and discharge of the external capacitor C. 
 1/3 Vcc and 2/3 vcc will be the voltage minimum and maximum during the charge and discharge of the capacitor C 
 through the resistors (RA & RB).
+The voltage divider provide two floating values that will be used by the next stage to compare the actual 
+capacitor charge with those two fixed values 1/3 & 2/2 Vcc. When the each values are reach, the comparators will 
+trigger two signals, RESET and SET to the flip-flop to e the state (open/close) of the Transistor T1 (NPN 2n222)
 
 ### Comparators U1A & U1B
-We are using the IC AS358 in open loop to behave like a comparator. The AS358 is a (low power dual operational
-amplifuers that can operates with a wide ranges of power supply voltages (in single supply mode 3v - 36V). 
-It as also a low input bias current of 20nA and low input offset voltages of 2mv, for those reasons a single 
-AS358 is used in the diagram for U1A & U1B. 
+For this experimentation, the signals TRIG and THRES are wired together and will be used to simulate the 
+external C capacitor with a triangular signal of 0 - 5v from a signal generator connected to those two pins
+The triangular signal will vary between the ground and +5v to simulate the capacitance charge and discharge. 
+The pair TRIG and THRES will be adjusted with an offset of 2.5V to make sure the entire signal vary above the
+ground level. The signal can also be a sine with the same settings (0-5v) with a DC offset of 2.5 V 
+
+For the comaparator, we are using the IC AS358 in open loop to behave like a comparator. The AS358 is a 
+(low power dual operational amplifuers that can operates with a wide ranges of power supply voltages 
+(in single supply mode 3v - 36V). It as also a low input bias current of 20nA and low input offset voltages
+of 2mv, for those reasons a single AS358 is used in the diagram for U1A & U1B. 
+
 The voltage supplied to the comparator is 0 - 5V and the output state will remain within the same range. 
 - Output is high (+5v) when V+ > V-  
 - Output is low (0v) when v+ < V- 
