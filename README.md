@@ -81,8 +81,19 @@ v- = (R2 + R3) / (R1 + (R2 + R3))
 v- = 2/3 * Vcc
 v- = 3.334V
 ```
-These two voltages will be used with a capacitor charge and discharge, 1/3 Vcc and 2/3vcc will be the voltage extremum during 
-the charge and discharge of the capacitor C through the resistors (RA & RB)
+These two voltages will be used to control the charge and discharge of the external capacitor C. 
+1/3 Vcc and 2/3 vcc will be the voltage minimum and maximum during the charge and discharge of the capacitor C 
+through the resistors (RA & RB).
+
+### Comparators U1A & U1B
+We are using the IC AS358 in open loop to behave like a comparator. The AS358 is a (low power dual operational
+amplifuers that can operates with a wide ranges of power supply voltages (in single supply mode 3v - 36V). 
+It as also a low input bias current of 20nA and low input offset voltages of 2mv, for those reasons a single 
+AS358 is used in the diagram for U1A & U1B. 
+The voltage supplied to the comparator is 0 - 5V and the output state will remain within the same range. 
+- Output is high (+5V) when V+ > V-  
+- Output is low (0v) when v+ < V- 
+
 
 
 
