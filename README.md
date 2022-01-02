@@ -111,7 +111,7 @@ The voltage supplied to the comparator is 0 - 5V and the output state will remai
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/set%20signal_simulation.bmp)
 
-![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/set%20signal_simulation.bmp)
+![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/reset%20signal_simulation.bmp)
 
 
 
