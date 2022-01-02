@@ -28,6 +28,12 @@ What is a 555 timer IC?
 A 555 timer IC, is a multipurpose integrated circuit chip, that finds its application in timer, oscillation and pulse generation circuits. It is one of the prominent and popular inventions of the electronic world. A monolithic timing circuit, the 555 timer, is equally reliable and cheap like op-amps working in the same areas. It is capable of producing stabilized square waveforms of 50% to 100% duty ratio.
 
 ## NE555 description
+
+`Pin diagram`
+
+![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/NE555_top_view.PNG)
+
+
 These devices are `precision timing` circuits capable of producing accurate time delays or oscillation. In the
 time-delay or `monostable` mode of operation, the timed interval is controlled by a single external resistor and
 capacitor network. In the `astable` mode of operation, the frequency and duty cycle can be controlled
@@ -46,9 +52,10 @@ Simplified schematic of an NE555
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/simplified%20schematic.PNG)
 
-## Study of the NE555 from a the schematic (*revisited RESET function removed from the RS flip-flop)
+## Study of the NE555 from the Kicad Simplified schematic
+- The RESET function has been removed from the RS flip-flop and will not be a part of this experiment
 
-We have split the schematic into N stages in order to study each steps separately. 
+We can study the schematic from 4 different stages
 * 1 The voltage bridge divider 
 * 2 The comparators stage
 * 3 The RS flip-flop 
