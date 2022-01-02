@@ -67,6 +67,8 @@ We can study the schematic from 4 different stages
 
 ### Voltage divider
 The voltage divider is made of 3 identical resistors R1, R2, R3 (value 5k) supply with a 5V DC power supply voltage 
-The current passing through R1, R2, R3 is identical as the current going through the IC AS358 on U1A (pin 2) & U1B (pin 5) is negligable few nA
+and current passing through R1, R2, R3 is identical as the current going through the IC AS358 on U1A (pin 2) & U1B (pin 5) is negligable.
+The input current going through the positive and negative inputs of an AS358 AOP is negligeable maximun few 100 nA, typical 20nA (low input bias current). 
+
 
 
