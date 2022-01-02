@@ -20,7 +20,7 @@ Simplified schematic of an NE555
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/simplified%20schematic.PNG)
 
-## Study of the NE555 from a the schematic (*revisited )
+## Study of the NE555 from a the schematic (*revisited RESET function removed from the RS flip-flop)
 
 We have split the schematic into N stages in order to study each steps separately. 
 * 1 The voltage bridge divider 
@@ -28,7 +28,6 @@ We have split the schematic into N stages in order to study each steps separatel
 * 3 The RS flip-flop 
 * 4 Frequency analysis with C charge and discharge
 
-`Simplified schematic` with additional leds
-* please note that the RESET function as been removed from the RS flip-flop and will not be a part of this experiment  
+`Simplified schematic with additional leds`
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/schema.png)
