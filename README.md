@@ -17,11 +17,11 @@ The output circuit is capable of sinking or sourcing current up to 200 mA. Opera
 5 V to 15 V. With a 5-V supply, output levels are compatible with TTL inputs.
 
 Simplified schematic of an NE555 
-![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/simplified schematic.png)
+
+![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/simplified%20schematic.PNG)
 
 
 `Simplified schematic` with additional leds
-* please note that the RESET function as been removed from the RS flip-flop and will not be a part 
-* of this testing 
+* please note that the RESET function as been removed from the RS flip-flop and will not be a part of this testing 
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/schema.png)
