@@ -109,7 +109,7 @@ The voltage supplied to the comparator is 0 - 5V and the output state will remai
 - Output is high (+5v) when V+ > V-  
 - Output is low (0v) when v+ < V- 
 
-![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/schema.png)
+![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/set%20signal_simulation.bmp)
 
 
 
