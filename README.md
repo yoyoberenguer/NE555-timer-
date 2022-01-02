@@ -95,7 +95,7 @@ T1 (NPN 2n222) status (open/close).
 ### Comparators U1A & U1B
 
 For this experimentation, the signals `TRIG` and `THRES` are wired together and will be used to simulate the 
-external C capacitor with a triangular signal of 0 - 5v from a signal generator connected to those two pins
+external C capacitor with a triangular signal of 0 - 5v from a signal generator connected to these two pins.
 The triangular signal will vary between the ground and +5v to simulate the capacitance charge and discharge. 
 The pair TRIG and THRES will be adjusted with an offset of 2.5V to make sure the entire signal vary above the
 ground level. The signal can also be a sine with the same settings (0-5v) with a DC offset of 2.5 V 
@@ -108,6 +108,8 @@ of 2mv, for those reasons a single AS358 is used in the diagram for U1A & U1B.
 The voltage supplied to the comparator is 0 - 5V and the output state will remain within the same range. 
 - Output is high (+5v) when V+ > V-  
 - Output is low (0v) when v+ < V- 
+
+Below the graph collected from the output of U1B
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/set%20signal_simulation.bmp)
 
