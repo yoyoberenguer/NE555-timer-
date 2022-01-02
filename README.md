@@ -64,3 +64,9 @@ We can study the schematic from 4 different stages
 `Kicad NE555 Simplified schematic version with additional leds`
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/schema.png)
+
+### Voltage divider
+The voltage divider is made of 3 identical resistors R1, R2, R3 (value 5k) supply with a 5V DC power supply voltage 
+The current passing through R1, R2, R3 is identical as the current going through the IC AS358 on U1A (pin 2) & U1B (pin 5) is negligable few nA
+
+
