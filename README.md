@@ -109,7 +109,9 @@ The voltage supplied to the comparator is 0 - 5V and the output state will remai
 - Output is high (+5v) when V+ > V-  
 - Output is low (0v) when v+ < V- 
 
-Below the graph collected from the output of U1B
+Below the graph collected from the comparator U1B
+The yellow signal represent the comparator outut on pin 7 and in blue the voltage reference on pin 6.
+You can also observed two horizontal lines surrounding the blue signal representing the voltages 1/3 & 2/3 Vcc
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/set%20signal_simulation.bmp)
 
