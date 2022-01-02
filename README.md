@@ -69,8 +69,8 @@ We can study the schematic from 4 different stages
 The voltage divider is made of 3 identical resistors R1, R2, R3 (value 5k) supply with a 5V DC power supply voltage.
 The input current going through the AOP AS358 is negligeable (maximun few 100 nA, typical 20nA) via U1A (pin 2) & U1B (pin 5)
 
-Consequently, the current passing through R1, R2, R3 is identical. 
-The voltage applied on the pin 5 is the determine as follow (v+ voltage on pin 5 and v- voltage on pin 2) with VCC = 5V
+Consequently, the current passing through R1, R2, R3 is the same. 
+The voltage applied on the pin 5 can be determine sush as : 
 ```
 v+ = (R3 / (R3 + R2 + R1)) * VCC 
 v+ = 1/3 * Vcc
@@ -81,6 +81,8 @@ v- = (R2 + R3) / (R1 + (R2 + R3))
 v- = 2/3 * Vcc
 v- = 3.334V
 ```
+* (v+ voltage on pin 5 and v- voltage on pin 2) and VCC = 5V
+
 These two voltages will be used to control the charge and discharge of the external capacitor C. 
 `1/3 Vcc` and `2/3 Vcc` will be the `minimum` and `maximum` values during the charge and discharge of the
 capacitor C through the resistors (RA & RB).
