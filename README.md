@@ -1,4 +1,4 @@
-# NE555 explain via the simplified schematic
+# NE555 explain 
 
 ## NE555 History 
 `source history here (https://www.circuitstoday.com/the-history-555-timer-ic)`
