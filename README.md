@@ -70,7 +70,7 @@ The voltage divider is made of 3 identical resistors R1, R2, R3 (value 5k) suppl
 The input current going through the AOP AS358 is negligeable maximun few 100 nA, typical 20nA (low input bias current) via U1A (pin 2) & U1B (pin 5)
 on the diagram. Consequently, the current passing through R1, R2, R3 is identical. 
 The voltage applied on the pin 5 is the determine as follow (v+ the voltage on pin 5) and VCC = 5V
-
+```
 v+ = (R3 / (R3 + R2 + R1)) * VCC 
 
 v+ = 1/3 * VCC
@@ -84,7 +84,7 @@ v- = (R2 + R3) / (R1 + (R2 + R3))
 v- = 2/3 * VCC
 
 v- = 3.334V
-
+```
 
 
 
