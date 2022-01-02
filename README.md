@@ -105,7 +105,7 @@ For the comaparators, we are using the IC AS358 `in open loop` to behave like a 
 (in single supply mode 3v - 36V). It as also a low input bias current of 20nA and low input offset voltages
 of 2mv, for those reasons a single AS358 is used in the diagram for U1A & U1B. 
 
-The voltage supplied to the comparator is 0 - 5V and the output state will remain within the same range. 
+The voltage supplied to the comparator is 0 - 5V and the output will varie from 0V to 5V. 
 - Output is high (+5v) when V+ > V-  
 - Output is low (0v) when v+ < V- 
 
