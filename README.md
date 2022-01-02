@@ -72,17 +72,12 @@ on the diagram. Consequently, the current passing through R1, R2, R3 is identica
 The voltage applied on the pin 5 is the determine as follow (v+ the voltage on pin 5) and VCC = 5V
 ```
 v+ = (R3 / (R3 + R2 + R1)) * VCC 
-
 v+ = 1/3 * VCC
-
 v+ = 1.667
 
 The voltage on pin 2 is : 
-
 v- = (R2 + R3) / (R1 + (R2 + R3)) 
-
 v- = 2/3 * VCC
-
 v- = 3.334V
 ```
 
