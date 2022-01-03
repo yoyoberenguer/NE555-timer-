@@ -83,18 +83,17 @@ v- = 3.334V
 ```
 * (v+ voltage on pin 5 and v- voltage on pin 2) and VCC = 5V
 
-These two voltages will be used to control the charge and discharge of the external capacitor C and will 
-determine the voltages range of the Capacitor C with `1/3 Vcc` and `2/3 Vcc` being the `minimum` and `maximum` 
-values during the charge and discharge of the capacitor C through the resistors (RA & RB).
-When MIN and MAX values are reach during the charging process, the comparators  will sequentially trigger two 
-signals, `RESET` and `SET` to the flip-flop in order to control the Transistor T1 (NPN 2n222) status (open/close).
+These two voltages are used for controling the external capacitor C and determine the operating voltage range
+(within `1/3 Vcc` and `2/3 Vcc`) during the charge and discharge of the capacitor C through the resistors (RA & RB).
+When 1/3 Vcc and 2/3 Vcc values are reach during the charging process, the comparators will sequentially trigger two 
+signals: `RESET` and `SET` to the flip-flop in order to control the Transistor T1 (NPN 2n222) status (open/close).
 
 ### Comparators U1A & U1B
 
 For this experimentation, the signals `TRIG` and `THRES` are wired together and will be used to simulate the 
-external C capacitor with a triangular signal of 0 - 5v from a signal generator connected to these two pins.
-The triangular signal will vary between the ground and +5v to simulate the capacitance charge and discharge. 
-The pair TRIG and THRES will be adjusted with an offset of 2.5V to make sure the entire signal vary above the
+external C capacitance charhe & disharge process with a triangular signal of amplitude 0 - 5v from a signal 
+generator connected to these two pins.
+The pair TRIG & THRES will be adjusted with an offset of 2.5V to make sure the entire signal vary above the
 ground level. The signal can also be a sine with the same settings (0-5v) with a DC offset of 2.5 V 
 
 For the comaparators, we are using the IC AS358 `in open loop` to behave like a comparator. The AS358 is a 
@@ -102,7 +101,7 @@ For the comaparators, we are using the IC AS358 `in open loop` to behave like a 
 (in single supply mode 3v - 36V). It as also a low input bias current of 20nA and low input offset voltages
 of 2mv, for those reasons a single AS358 is used in the diagram for U1A & U1B. 
 
-The voltage supplied to the comparator is 0 - 5V and the output will varie from 0V to 5V. 
+The voltage supplied to the comparator is 0 - 5V and the output will vary from 0V to 5V. 
 - Output is high (+5v) when V+ > V-  
 - Output is low (0v) when v+ < V- 
 
