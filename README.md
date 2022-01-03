@@ -55,7 +55,7 @@ Simplified schematic of an NE555
 ## Study of the NE555 from the Kicad Simplified schematic
 - The RESET function has been removed from the RS flip-flop and will not be a part of this experiment
 
-We can study the schematic from 4 different stages
+We can study the NE555 into 4 different steps:
 * 1 The voltage bridge divider 
 * 2 The comparators stage
 * 3 The RS flip-flop 
@@ -70,7 +70,7 @@ The voltage divider is made of 3 identical resistors R1, R2, R3 (value 5k) suppl
 The input current going through the AOP AS358 is negligeable (maximun few 100 nA, typical 20nA) via U1A (pin 2) & U1B (pin 5)
 
 Consequently, the current passing through R1, R2, R3 is the same. 
-The voltage applied on the pin 5 can be determine sush as : 
+The voltage applied on the pin 5 and to pin 2 can be calculated as follow: 
 ```
 v+ = (R3 / (R3 + R2 + R1)) * VCC 
 v+ = 1/3 * Vcc
@@ -83,14 +83,11 @@ v- = 3.334V
 ```
 * (v+ voltage on pin 5 and v- voltage on pin 2) and VCC = 5V
 
-These two voltages will be used to control the charge and discharge of the external capacitor C. 
-`1/3 Vcc` and `2/3 Vcc` will be the `minimum` and `maximum` values during the charge and discharge of the
-capacitor C through the resistors (RA & RB).
-
-The voltage divider provide two floating values that will be used by the next stage to compare the actual 
-capacitor voltage level. When MIN and MAX values are reach during the charging process, the comparators 
-will sequentially trigger two signals, `RESET` and `SET` to the flip-flop in order to control the Transistor 
-T1 (NPN 2n222) status (open/close).
+These two voltages will be used to control the charge and discharge of the external capacitor C and will 
+determine the voltages range of the Capacitor C with `1/3 Vcc` and `2/3 Vcc` being the `minimum` and `maximum` 
+values during the charge and discharge of the capacitor C through the resistors (RA & RB).
+When MIN and MAX values are reach during the charging process, the comparators  will sequentially trigger two 
+signals, `RESET` and `SET` to the flip-flop in order to control the Transistor T1 (NPN 2n222) status (open/close).
 
 ### Comparators U1A & U1B
 
