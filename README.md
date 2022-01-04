@@ -56,10 +56,10 @@ Simplified schematic of an NE555
 - The RESET function has been removed from the RS flip-flop and will not be a part of this experiment
 
 We can study the NE555 into 4 different steps:
-* 1 The voltage bridge divider 
-* 2 The comparators stage
-* 3 The RS flip-flop 
-* 4 Frequency analysis with C charge and discharge
+* 1) The voltage bridge divider 
+* 2) The comparators stage
+* 3) The RS flip-flop 
+* 4) Frequency analysis with C charge and discharge
 
 `Kicad NE555 Simplified schematic version with additional leds`
 
@@ -117,13 +117,18 @@ and the RS flip-flop is `reset`
 
 
 `Figure 1A`
+
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/set%20signal_simulation.bmp)
 
 When THRES voltage (pin 3) is > 3.33v the comparator output goes high (V+ > V-) and the RS flip-flop is `set`.
 When THRES is below 3.33 the output goes low (V+ < V-)
 
-'Figure 1B`
+`Figure 1B`
+
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/reset%20signal_simulation.bmp)
 
 
+### RS flip-flop
+
+For the RS flip-flop we are using the IC 74HCT02 (2 NOR gates)
 
