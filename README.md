@@ -130,5 +130,8 @@ When THRES is below 3.33 the output goes low (V+ < V-)
 
 ### RS flip-flop
 
-For the RS flip-flop we are using the IC 74HCT02 (2 NOR gates)
+For the RS flip-flop we are using the IC 74HCT02 (NOR gates) 
+
+![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
+
 
