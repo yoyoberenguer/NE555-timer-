@@ -111,18 +111,18 @@ the external C voltage variation values (see figure 1A).
 
 The yellow square signal represent the comparator output on pin 7 and in blue the voltage reference on pin 6.
 You can also observe two light blue horizontal lines representing the voltages 1/3 & 2/3 Vcc
-
-When TRIG voltage (pin 6) is > 1.66v the comparator output goes low (V- > V+) and when TRIG is below 1.66 the output goes high (V+ > V-) 
-and the RS flip-flop is `reset`
-
+```
+When TRIG voltage (pin 6) is > 1.66v the comparator output goes low (V- > V+) and when 
+TRIG is below 1.66 the output goes high (V+ > V-) and the RS flip-flop is `reset`
+```
 
 `Figure 1A`
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/set%20signal_simulation.bmp)
-
-When THRES voltage (pin 3) is > 3.33v the comparator output goes high (V+ > V-) and the RS flip-flop is `set`.
-When THRES is below 3.33 the output goes low (V+ < V-)
-
+```
+When THRES voltage (pin 3) is > 3.33v the comparator output goes high (V+ > V-) and the 
+RS flip-flop is `set`. When THRES is below 3.33 the output goes low (V+ < V-)
+```
 `Figure 1B`
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/reset%20signal_simulation.bmp)
@@ -130,8 +130,8 @@ When THRES is below 3.33 the output goes low (V+ < V-)
 
 ### RS flip-flop
 
-For the RS flip-flop we are using the IC 74HCT02 (NOR gates) 
-RS truth table below 
+For the RS flip-flop we are using the IC 74HCT02 (NOR gates). 
+RS truth table below (R = 1 & S = 1) is an invalid condition
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
 
