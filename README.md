@@ -91,7 +91,7 @@ signals: `RESET` and `SET` to the flip-flop in order to control the Transistor T
 ### Comparators U1A & U1B
 
 For this experimentation, the signals `TRIG` and `THRES` are wired together and will be used to simulate the 
-external C capacitance charhe & disharge process with a triangular signal of amplitude 0 - 5v from a signal 
+external C capacitance charge & disharge process with a triangular signal of amplitude 0 - 5v from a signal 
 generator connected to these two pins.
 The pair TRIG & THRES will be adjusted with an offset of 2.5V to make sure the entire signal vary above the
 ground level. The signal can also be a sine with the same settings (0-5v) with a DC offset of 2.5 V 
@@ -108,12 +108,17 @@ The voltage supplied to the comparator is 0 - 5V and the output will vary from 0
 #### Comparator U1B
 As stated above, a triangular signal is used for the negative input (pin 6, labeled TRIG) and will represent 
 the external C voltage variation values (see figure 1A).
+
 The yellow square signal represent the comparator output on pin 7 and in blue the voltage reference on pin 6.
-You can also observe two blue horizontal lines representing the voltages 1/3 & 2/3 Vcc
+You can also observe two light blue horizontal lines representing the voltages 1/3 & 2/3 Vcc
 
+When TRIG voltage (pin 6) is > 1.66v the comparator output goes low (V- > V+) and when TRIG is below 1.66 the output goes high (V+ > V-)
 
+`Figure 1A`
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/set%20signal_simulation.bmp)
 
+When THRES voltage (pin 3) is > 3.33v the comparator output goes high (V+ > V-) and when THRES is below 3.33 the output goes low (V+ < V-)
+'Figure 1B`
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/reset%20signal_simulation.bmp)
 
 
