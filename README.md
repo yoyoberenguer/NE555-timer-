@@ -157,7 +157,7 @@ to be in an invalid state (output Q and Q bar undetermined).
 At t=0 the external capacitor C is disharge and Uc=0v. 
 The potential TRIG is equivalent to the voltage difference across the Capacitor (TRIG = 0v) 
 The comparator U1B output is high (see figure 1A) and the RS flip-flop output Q bar is low, the transitor T1 is open and 
-the capacitor is charging from ov to 2/3 Vcc through R1 and R2 resistors. 
+the capacitor is now charging from ov to 2/3 Vcc through R1 and R2 resistors. 
 When the Uc goes over 2/3 Vcc, the comparator U1A ouput is set to high (+5v) and the RS output Q bar is high and a current
 is flowing through the transistor base which is now in saturation mode and the flag THRES is now connected to the ground.
 As TRESH is connected to the ground the capacitor is now disharging its energy through the resistor R2 and Uc voltage is 
