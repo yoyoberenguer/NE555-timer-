@@ -118,14 +118,14 @@ TRIG is below 1.66 the output goes high (V+ > V-) and the RS flip-flop is `reset
 
 `Figure 1A`
 
-![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/set%20signal_simulation.bmp)
+![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/figure1a.png)
 ```
 When THRES voltage (pin 3) is > 3.33v the comparator output goes high (V+ > V-) and the 
 RS flip-flop is `set`. When THRES is below 3.33 the output goes low (V+ < V-)
 ```
 `Figure 1B`
 
-![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/reset%20signal_simulation.bmp)
+![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/figure1b.png)
 
 ### RS flip-flop
 
