@@ -56,10 +56,10 @@ Simplified schematic of an NE555
 - The RESET function has been removed from the RS flip-flop and will not be a part of this experiment
 
 We can study the NE555 into 4 different steps:
-* 1) The voltage bridge divider 
-* 2) The comparators stage
-* 3) The RS flip-flop 
-* 4) Frequency analysis with C charge and discharge
+1) The voltage bridge divider 
+2) The comparators stage
+3) The RS flip-flop 
+4) Frequency analysis with C charge and discharge
 
 `Kicad NE555 Simplified schematic version with additional leds`
 
@@ -97,7 +97,7 @@ The pair TRIG & THRES will be adjusted with an offset of 2.5V to make sure the e
 ground level. The signal can also be a sine with the same settings (0-5v) with a DC offset of 2.5 V 
 
 For the comaparators, we are using the IC AS358 `in open loop` to behave like a comparator. The AS358 is a 
-(low power dual operational amplifuers that can operates with a wide ranges of power supply voltages 
+(low power dual operational amplifier that can operates with a wide ranges of power supply voltages 
 (in single supply mode 3v - 36V). It as also a low input bias current of 20nA and low input offset voltages
 of 2mv, for those reasons a single AS358 is used in the diagram for U1A & U1B. 
 
@@ -110,7 +110,7 @@ As stated above, a triangular signal is used for the negative input (pin 6, labe
 the external C voltage variation values (see figure 1A).
 
 The yellow square signal represent the comparator output on pin 7 and in blue the voltage reference on pin 6.
-You can also observe two light blue horizontal lines representing the voltages 1/3 & 2/3 Vcc
+You can also observe two horizontal light blue lines representing the constant voltages 1/3 & 2/3 Vcc for reference.
 ```
 When TRIG voltage (pin 6) is > 1.66v the comparator output goes low (V- > V+) and when 
 TRIG is below 1.66 the output goes high (V+ > V-) and the RS flip-flop is `reset`
@@ -127,11 +127,11 @@ RS flip-flop is `set`. When THRES is below 3.33 the output goes low (V+ < V-)
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/reset%20signal_simulation.bmp)
 
-
 ### RS flip-flop
 
-For the RS flip-flop we are using the IC 74HCT02 (NOR gates). 
-RS truth table below (R = 1 & S = 1) is an invalid condition
+For the RS flip-flop we are using the IC 74HCT02 (NOR gates). The Thruth table is defined below (R = 1 & S = 1) is an invalid condition
+* When input R is high the RS output Q goes low (Q bar is high)
+* When the input S is high the RS output Q goes high (Q bar is low )
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
 
