@@ -1,5 +1,9 @@
 # NE555 explain 
 
+`astable configuration`
+
+![astablec](https://github.com/yoyoberenguer/NE555-timer-/blob/main/NE555.png)
+
 ## NE555 History 
 `source history here (https://www.circuitstoday.com/the-history-555-timer-ic)`
 
@@ -134,8 +138,10 @@ The transistor T1 base is connected to the Q bar output (inversed Q) while the c
 connected to the external C capacitor (flag DISH)
 The Thruth table is defined below (R = 1 & S = 1) is an invalid condition
 
+![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
+
 * When input R is high `reset` the RS output Q is low (Q bar is high).
-  A current is going through the transistor T1 base (the transistor is saturated) 
+  A current is going through the transistor base (T1 is saturated) 
   The flag DISH is connected to the ground and the external capacitor is disharging through 
   the resistor RB connected to ground via (DISH flag)
   
@@ -147,6 +153,6 @@ As shown in the figures 1A & 1B the comparator outputs are never set to +5v at t
 to be in an invalid state (output Q and Q bar undetermined).
 
 
-![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
+
 
 
