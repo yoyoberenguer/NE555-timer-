@@ -168,8 +168,26 @@ exponentially decreasing until reaching the potential 1/3 Vcc.
 When Uc pass below 1/3 Vcc the Comparator U1B is triggering the RS flip-flop with the output voltage Q bar set to low and 
 the transistor is now open forcing the capacitor to charge again through R1 & R2 and so on. 
 
+```
+C is charging through R1 & R2 and τ = C(R1 + R2) 
 
+2/3 * Vcc = Vcc * (1 - exp(-t0/τ)) 
+t0 = -τ * ln(1/2)
 
+C is disharging through R2 and τ = R2.C
+1/3 * Vcc = 2/3 * Vcc * exp(-t1/τ) 
+t1 = -τ * ln(1/2)
+
+T = t0 + t1  with ln(1.0/2.0) ≃ -0.7
+T = 0.7 * C * (R1+R2) + 0.7 * R2C 
+T = 0.7 * (R1 + 2 * R2)* C
+
+frequency = 1 / T 
+frequency = 1.0 / (0.7 * (R1 + 2 * R2) * C ) 
+or 
+frequenct = 1.44 / ((R1 + 2 * R2) * C)
+
+```
 
 
 
