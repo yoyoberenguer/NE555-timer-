@@ -192,6 +192,10 @@ Output driver duty cycle = t0 / ( t1 + t0)  = RB / (RA + 2 * RB)
 Output waveform duty cycle = t1 / (t0 + t1) 
 ```
 
+figure 2 showing the charge and discharge of the external capacitor C between 1/3Vcc and 2/3Vccc
+
+`figure 2`
+![External C charge and discharge](https://github.com/yoyoberenguer/NE555-timer-/blob/main/External_C.bmp)
 
 
 
