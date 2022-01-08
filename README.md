@@ -35,7 +35,7 @@ A 555 timer IC, is a multipurpose integrated circuit chip, that finds its applic
 
 `Pin diagram`
 
-![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/NE555_top_view.PNG)
+![PIN Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/NE555_top_view.PNG)
 
 
 These devices are `precision timing` circuits capable of producing accurate time delays or oscillation. In the
@@ -54,7 +54,7 @@ The output circuit is capable of sinking or sourcing current up to 200 mA. Opera
 
 Simplified schematic of an NE555 
 
-![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/simplified%20schematic.PNG)
+![NE555 Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/simplified%20schematic.PNG)
 
 ## Study of the NE555 from the Kicad Simplified schematic
 - The RESET function has been removed from the RS flip-flop and will not be a part of this experiment
@@ -122,7 +122,7 @@ TRIG is below 1.66 the output goes high (V+ > V-) and the RS flip-flop is `reset
 
 `Figure 1A`
 
-![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/figure1a.png)
+![Comparator 1UA](https://github.com/yoyoberenguer/NE555-timer-/blob/main/figure1a.png)
 ```
 When THRES voltage (pin 3) is > 3.33v the comparator output goes high (V+ > V-) and the 
 RS flip-flop is `set`. When THRES is below 3.33 the output goes low (V+ < V-)
@@ -138,7 +138,7 @@ The transistor T1 base is connected to the Q bar output (inversed Q) while the c
 connected to the external C capacitor (flag DISH)
 The Thruth table is defined below (R = 1 & S = 1) is an invalid condition
 
-![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
+![Comparator 1UBc](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
 
 * When input R is high `reset` the RS output Q is low (Q bar is high).
   A current is going through the transistor base (T1 is saturated) 
