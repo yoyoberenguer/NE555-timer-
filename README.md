@@ -133,6 +133,10 @@ For the RS flip-flop we are using the IC 74HCT02 (NOR gates). The Thruth table i
 * When input R is high the RS output Q goes low (Q bar is high)
 * When the input S is high the RS output Q goes high (Q bar is low )
 
+As shown in the figures 1A & 1B the comparator outputs are never set to +5v at the same avoiding the flip-flop 
+to be in an invalid state (output Q and Q bar) to be undetermined
+
+
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
 
 
