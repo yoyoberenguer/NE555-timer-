@@ -129,15 +129,22 @@ RS flip-flop is `set`. When THRES is below 3.33 the output goes low (V+ < V-)
 
 ### RS flip-flop
 
-For the RS flip-flop we are using the IC 74HCT02 (NOR gates). The Thruth table is defined below (R = 1 & S = 1) is an invalid condition
-* When input R is high `reset` the RS output Q goes low (Q bar is high)
-  and the transistor T1 is open (the base is connected to Q bar)
-* When the input S is high `set` the RS output Q goes high (Q bar is low)
-  and the transistor T1 is close
+For the RS flip-flop we are using the IC 74HCT02 (NOR gates). 
+The transistor T1 base is connected to the Q bar output (inversed Q) while the collector is 
+connected to the external C capacitor (flag DISH)
+The Thruth table is defined below (R = 1 & S = 1) is an invalid condition
 
+* When input R is high `reset` the RS output Q is low (Q bar is high).
+  A current is going through the transistor T1 base (the transistor is saturated) 
+  The flag DISH is connected to the ground and the external capacitor is disharging through 
+  the resistor RB connected to ground via (DISH flag)
+  
+* When the input S is high `set` the RS output Q goes high (Q bar is low)
+  and the transistor T1 is open, the flag DISH is disconnected. 
+  The external capacitor is charging  through the resistors  RA & RB connected to vcc (+5v)
+  
 As shown in the figures 1A & 1B the comparator outputs are never set to +5v at the same time avoiding the flip-flop 
 to be in an invalid state (output Q and Q bar undetermined).
-
 
 
 ![Simplified Schematic](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
