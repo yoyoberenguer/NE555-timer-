@@ -187,6 +187,9 @@ frequency = 1.0 / (0.7 * (R1 + 2 * R2) * C )
 or 
 frequenct = 1.44 / ((R1 + 2 * R2) * C)
 
+
+Output driver duty cycle = t0 / ( t1 + t0)  = RB / (RA + 2 * RB)
+Output waveform duty cycle = t1 / (t0 + t1) 
 ```
 
 
