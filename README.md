@@ -144,14 +144,14 @@ The Thruth table is defined below (R = 1 & S = 1) is an invalid condition
 
 ![Comparator 1UBc](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
 
-* When input R is high `reset` the RS output Q is low (Q bar is high).
+* When input R is high `reset mode` the RS output Q is low (Q bar is high).
   A current is going through the transistor base (T1 is saturated) 
   The flag DISH is connected to the ground and the external capacitor is disharging through 
   the resistor RB connected to ground via (DISH flag)
   
-* When the input S is high `set` the RS output Q goes high (Q bar is low)
+* When the input S is high `set mode` the RS output Q goes high (Q bar is low)
   and the transistor T1 is open, the flag DISH is disconnected. 
-  The external capacitor is charging  through the resistors  RA & RB connected to vcc (+5v)
+  The external capacitor is charging  through the resistors  R1 & R2 connected to vcc (+5v)
   
 As shown in the figures 1A & 1B the comparator outputs are never set to +5v at the same time avoiding the flip-flop 
 to be in an invalid state (output Q and Q bar undetermined).
@@ -189,11 +189,12 @@ T = 0.7 * (R1 + 2 * R2)* C
 frequency = 1 / T 
 frequency = 1.0 / (0.7 * (R1 + 2 * R2) * C ) 
 or 
-frequenct = 1.44 / ((R1 + 2 * R2) * C)
+frequency = 1.44 / ((R1 + 2 * R2) * C)
 
 
-Output driver duty cycle = t0 / ( t1 + t0)  = RB / (RA + 2 * RB)
-Output waveform duty cycle = t1 / (t0 + t1) 
+Output driver duty cycle = t0 / ( t1 + t0)  = RB / (R1 + 2 * RB)
+Output waveform duty cycle = t1 / (t0 + t1)  = 1 - (R2 / (R1 + 2R2))
+low to high ratio = t0 / t1 = R2 / (R1 + R2)
 ```
 
 figure 2 showing the charge and discharge of the external capacitor C between 1/3Vcc cursor a and 2/3Vccc cursor b
