@@ -88,7 +88,7 @@ v- = 3.334V
 * (v+ voltage on pin 5 and v- voltage on pin 2) and VCC = 5V
 
 These two voltages are used for controling the external capacitor C and determine the operating voltage range
-(within `1/3 Vcc` and `2/3 Vcc`) during the charge and discharge of the capacitor C through the resistors (RA & RB).
+(within `1/3 Vcc` and `2/3 Vcc`) during the charge and discharge of the capacitor C through the resistors (R1 & R2).
 When 1/3 Vcc and 2/3 Vcc values are reach during the charging process, the comparators will sequentially trigger two 
 signals: `RESET` and `SET` to the flip-flop in order to control the Transistor T1 (NPN 2n222) status (open/close).
 
