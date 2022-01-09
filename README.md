@@ -113,19 +113,21 @@ The voltage supplied to the comparator is 0 - 5V and the output will vary from 0
 As stated above, a triangular signal is used for the negative input (pin 6, labeled TRIG) and will represent 
 the external C voltage variation values (see figure 1A).
 
-The yellow square signal represent the comparator output on pin 7 and in blue the voltage reference on pin 6.
-You can also observe two horizontal light blue lines representing the constant voltages 1/3 & 2/3 Vcc for reference.
+The yellow triangular signal represent the simulated external C voltage on pin 6 and in blue the comparator output voltage 
+reference on pin 7. You can also observe two horizontal light blue lines representing the constant voltages 1/3 Vcc
+& 2/3 Vcc for reference.
 ```
 When TRIG voltage (pin 6) is > 1.66v the comparator output goes low (V- > V+) and when 
-TRIG is below 1.66 the output goes high (V+ > V-) and the RS flip-flop is `reset`
+TRIG is below 1.66 the output goes high (V+ > V-) and the RS flip-flop is in mode `reset`
 ```
 
 `Figure 1A comparator U1B`
 
 ![Comparator 1UA](https://github.com/yoyoberenguer/NE555-timer-/blob/main/figure1a.png)
 ```
-When THRES voltage (pin 3) is > 3.33v the comparator output goes high (V+ > V-) and the 
-RS flip-flop is `set`. When THRES is below 3.33 the output goes low (V+ < V-)
+When THRES voltage representing the external Capacitor voltage (pin 3) is > 3.33v the 
+comparator output goes high (V+ > V-) and the RS flip-flop is in mode `set`.
+When THRES is below 3.33 the output goes low (V+ < V-)
 ```
 `Figure 1B comparator U1A`
 
