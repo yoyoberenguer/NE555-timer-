@@ -203,11 +203,15 @@ figure 2 showing the charge and discharge of the external capacitor C between 1/
 
 ![External C charge and discharge](https://github.com/yoyoberenguer/NE555-timer-/blob/main/External_C.bmp)
 
-
+In the above experiment 
+```
+R1 = 1K 
+R2 = 7K 
+```
 As you can see the duty cycle is directly proportional to R1 & R2 
 `TL = -C(R1 + R2)  * ln(1.0/2.0)`
 `TH = -C * R2 * ln(1.0/2.0)`
 
-The schema below show a duty cycle of 50%
+The schema below propose a duty cycle of 50% (TL = TH)
 
 ![External C charge and discharge](https://github.com/yoyoberenguer/NE555-timer-/blob/main/DutyCycle50.gif)
