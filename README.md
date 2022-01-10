@@ -166,7 +166,7 @@ the capacitor is now charging from ov to 2/3 Vcc through R1 and R2 resistors.
 When the voltage Uc goes over 2/3 Vcc, the comparator U1A ouput is set to high (+5v) and the RS output Q bar is high forcing a current
 to flow through the transistor base which is now in saturation mode and THRES is at the same potential than the ground.
 
-As TRESH is connected to the ground the capacitor is now disharging its energy through the resistor R2 and Uc voltage is 
+As TRESH is connected to the ground the capacitor is now disharging the energy through the resistor R2 and Uc voltage is 
 exponentially decreasing until reaching the potential 1/3 Vcc. 
 
 When Uc pass below 1/3 Vcc the Comparator U1B is triggering the RS flip-flop with the output voltage Q bar set to low and 
@@ -204,4 +204,9 @@ figure 2 showing the charge and discharge of the external capacitor C between 1/
 ![External C charge and discharge](https://github.com/yoyoberenguer/NE555-timer-/blob/main/External_C.bmp)
 
 
+As you can see the duty cycle is directly proportional to R1 & R2, The capacitor is charging through 
+R1 + R2 and disharging through only RB causing the duty cycle to by asymetric in most of the case. 
 
+The schema below show a duty cycle of 50%
+
+![External C charge and discharge](https://github.com/yoyoberenguer/NE555-timer-/blob/main/DutyCycle50.gif)
