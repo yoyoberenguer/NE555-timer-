@@ -176,13 +176,13 @@ the transistor is now open forcing the capacitor to charge again through R1 & R2
 C is charging through R1 & R2 and τ = C(R1 + R2) 
 
 2/3 * Vcc = Vcc * (1 - exp(-t0/τ)) 
-t0 = -τ * ln(1/2)
+t0 = -τ * ln(1/2) = τ * 0.7
 
 C is disharging through R2 and τ = R2.C
 1/3 * Vcc = 2/3 * Vcc * exp(-t1/τ) 
-t1 = -τ * ln(1/2)
+t1 = -τ * ln(1/2) = τ * 0.7
 
-T = t0 + t1  with ln(1.0/2.0) ≃ -0.7
+T = t0 + t1  
 T = 0.7 * C * (R1+R2) + 0.7 * R2C 
 T = 0.7 * (R1 + 2 * R2)* C
 
@@ -207,10 +207,19 @@ In the above experiment
 ```
 R1 = 1K 
 R2 = 7K 
+C = 10uF
+t0 = 0.0559
+t1 = 0.049
+T = 0.10499
+f = 9.5Hz
+output driver duty cycle = 0.5504
+output waveform duty cycle = 0.4495
+low to high ratio = 1.224
+
 ```
 As you can see the duty cycle is directly proportional to R1 & R2 
-`TL = -C(R1 + R2)  * ln(1.0/2.0)`
-`TH = -C * R2 * ln(1.0/2.0)`
+`TL = C(R1 + R2) * 0.7`
+`TH = C * R2 * 0.7`
 
 The schema below propose a duty cycle of 50% (TL = TH)
 
