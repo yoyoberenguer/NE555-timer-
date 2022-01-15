@@ -137,38 +137,38 @@ When THRES is below 3.33 the output goes low (V+ < V-)
 ### RS flip-flop
 
 For the RS flip-flop we are using the IC 74HCT02 (NOR gates). 
-The transistor T1 base is connected to the Q bar output (inversed Q) while the collector is 
+The transistor T1 base is connected to the not Q output (inversed Q) while the collector is 
 connected to the external C capacitor (flag DISH)
 The Thruth table is defined below (R = 1 & S = 1) is an invalid condition
 
 ![Comparator 1UBc](https://github.com/yoyoberenguer/NE555-timer-/blob/main/SR.png)
 
-* When input R is high `reset mode` the RS output Q is low (Q bar is high).
+* When input R is high `reset mode` the RS output Q is low (not Q is high).
   A current is going through the transistor base (T1 is saturated) 
   The flag DISH is connected to the ground and the external capacitor is disharging through 
   the resistor RB connected to ground via (DISH flag)
   
-* When the input S is high `set mode` the RS output Q goes high (Q bar is low)
+* When the input S is high `set mode` the RS output Q goes high (not Q is low)
   and the transistor T1 is open, the flag DISH is disconnected. 
   The external capacitor is charging  through the resistors  R1 & R2 connected to vcc (+5v)
   
 As shown in the figures 1A & 1B the comparator outputs are never set to +5v at the same time avoiding the flip-flop 
-to be in an invalid state (output Q and Q bar undetermined).
+to be in an invalid state (output Q and not Q undetermined).
 
 ### Frequency analysis (time Period and Frequency)
 
 At t=0 the external capacitor C is disharge and Uc=0v. 
 The potential TRIG is equivalent to the voltage difference across the Capacitor (TRIG = 0v) 
-The comparator U1B output is high (see figure 1A) and the RS flip-flop output Q bar is low, the transitor T1 is open and 
+The comparator U1B output is high (see figure 1A) and the RS flip-flop output not Q is low, the transitor T1 is open and 
 the capacitor is now charging from ov to 2/3 Vcc through R1 and R2 resistors. 
 
-When the voltage Uc goes over 2/3 Vcc, the comparator U1A ouput is set to high (+5v) and the RS output Q bar is high forcing a current
+When the voltage Uc goes over 2/3 Vcc, the comparator U1A ouput is set to high (+5v) and the RS output not Q is high forcing a current
 to flow through the transistor base which is now in saturation mode and THRES is at the same potential than the ground.
 
 As TRESH is connected to the ground the capacitor is now disharging through the resistor R2 and Uc voltage is 
 exponentially decreasing until reaching the potential 1/3 Vcc. 
 
-When Uc pass below 1/3 Vcc the Comparator U1B is triggering the RS flip-flop with the output voltage Q bar set to low and 
+When Uc pass below 1/3 Vcc the Comparator U1B is triggering the RS flip-flop with the output voltage not Q set to low and 
 the transistor is now open forcing the capacitor to charge again through R1 & R2 and so on. 
 
 ```
@@ -202,14 +202,14 @@ figure 2 showing the charge and discharge of the external capacitor C between 1/
 
 ![External C charge and discharge](https://github.com/yoyoberenguer/NE555-timer-/blob/main/External_C.bmp)
 
-In the above experiment 
+Components values for the above experiment 
 ```
 R1 = 1K 
 R2 = 7K 
 C = 10uF
-t0 = 0.0559
-t1 = 0.049
-T = 0.10499
+t0 = 0.0559ms
+t1 = 0.049ms
+T = 0.10499ms
 f = 9.5Hz
 output driver duty cycle = 0.5504
 output waveform duty cycle = 0.4495
