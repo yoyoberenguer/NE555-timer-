@@ -202,6 +202,17 @@ figure 2 showing the charge and discharge of the external capacitor C between 1/
 
 ![External C charge and discharge](https://github.com/yoyoberenguer/NE555-timer-/blob/main/External_C.bmp)
 
+Below the comparator ouput when Uc (capacitor voltage) goes below 1/3 Vcc 
+
+`figure 3` 
+
+![Comaparator output 1/3vcc](https://github.com/yoyoberenguer/NE555-timer-/blob/main/figure1a_real.png)
+
+`figure 4` 
+
+![Comparator output 2/3 vcc](https://github.com/yoyoberenguer/NE555-timer-/blob/main/figure1b_real.png)
+
+
 Components values for the above experiment 
 ```
 R1 = 1K 
