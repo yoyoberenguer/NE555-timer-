@@ -232,7 +232,8 @@ the RS flip-flip)
 Components values for the above experiment 
 ```
 R1 = 1K 
-R2 = 7K 
+R2 = 7K (* by adding a potentiometer instead of a fixe R value 
+  you can change the frequency and the duty cycle)
 C = 10uF
 t0 = 0.0559ms
 t1 = 0.049ms
