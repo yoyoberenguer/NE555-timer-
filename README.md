@@ -220,11 +220,11 @@ the RS flip-flip)
 ![Comparator output 2/3 vcc](https://github.com/yoyoberenguer/NE555-timer-/blob/main/figure1b_real.png)
 
 
-`figure 5` RS flipflop output (high state, T1 is closed and C discharge through R2)
+`figure 5` RS flipflop output (+5v, T1 is closed and C discharge through R2)
 
 ![RS flip-flop output](https://github.com/yoyoberenguer/NE555-timer-/blob/main/output.png)
 
-`figure 6` inverted signal 
+`figure 6` inverted signal from the RS flip-flop (in our experiment we are using a NOR gate to invert the signal)
 
 ![NE555 output](https://github.com/yoyoberenguer/NE555-timer-/blob/main/output_inverted.png)
 
