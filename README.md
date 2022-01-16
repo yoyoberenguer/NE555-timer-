@@ -202,7 +202,7 @@ figure 2 showing the charge and discharge of the external capacitor C between 1/
 
 ![External C charge and discharge](https://github.com/yoyoberenguer/NE555-timer-/blob/main/External_C.bmp)
 
-Below the real comparator U1B ouput when Uc (capacitor voltage) goes below 1/3 Vcc. 
+Below the comparator U1B (real) ouput when Uc (capacitor voltage) goes below 1/3 Vcc. 
 The transition from low to hight state is very brief since the UC voltage is below 1/3Vcc for a very 
 short period (since the Capacitor will start charging)
 
@@ -210,7 +210,7 @@ short period (since the Capacitor will start charging)
 
 ![Comaparator output 1/3vcc](https://github.com/yoyoberenguer/NE555-timer-/blob/main/figure1a_real.png)
 
-Below the real comparator U1A output when Uc goes above 2/3 vcc.
+Below the comparator U1A (real) output when Uc goes above 2/3 vcc.
 The transition from low to high is very brief since the UC voltage > 2/3 vcc is true for 
 a very short lapse of time (the capacitor start discharging as soon as the pick is detected by 
 the RS flip-flip)
