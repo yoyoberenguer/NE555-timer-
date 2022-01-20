@@ -75,16 +75,11 @@ The input current going through the AOP AS358 is negligeable (maximun few nA, ty
 
 Consequently, the current passing through R1, R2, R3 is the same. 
 The voltage applied on the pin 5 and to pin 2 can be determine as follow: 
-```
-v+ = (R3 / (R3 + R2 + R1)) * VCC 
-v+ = 1/3 * Vcc
-v+ = 1.667
 
-The voltage on pin 2 is : 
-v- = (R2 + R3) / (R1 + (R2 + R3)) 
-v- = 2/3 * Vcc
-v- = 3.334V
-```
+![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart1.png)
+
+`The voltage on pin 2 is` 
+![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart2.png)
 * (v+ voltage on pin 5 and v- voltage on pin 2) and VCC = 5V
 
 These two voltages are used for controling the external capacitor C operating voltage range
