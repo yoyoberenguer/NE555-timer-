@@ -171,30 +171,33 @@ exponentially decreasing until reaching the potential 1/3 Vcc.
 When Uc pass below 1/3 Vcc the Comparator U1B is triggering the RS flip-flop with the output voltage not Q set to low and 
 the transistor is now open forcing the capacitor to charge again through R1 & R2 and so on. 
 
-
-`C is charging through R1 & R2 and τ = C(R1 + R2)`
-
-![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart3.png)
-
-![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart4.png)
-
+```
 `C is disharging through R2 and τ = R2.C`
 
-![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart5.png)
+C is charging through R1 & R2 and τ = C(R1 + R2) 
 
-![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart8.png)
+2/3 * Vcc = Vcc * (1 - exp(-t0/τ)) 
+t0 = -τ * ln(1/2) = τ * 0.7
 
-![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart6.png)
+C is disharging through R2 and τ = R2.C
+1/3 * Vcc = 2/3 * Vcc * exp(-t1/τ) 
+t1 = -τ * ln(1/2) = τ * 0.7
+
+T = t0 + t1  
+T = 0.7 * C * (R1+R2) + 0.7 * R2C 
+T = 0.7 * (R1 + 2 * R2)* C
+
+frequency = 1 / T 
+frequency = 1.0 / (0.7 * (R1 + 2 * R2) * C ) 
+``` 
 
 ![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart7.png)
 
-
-`Output driver duty cycle = t0 / ( t1 + t0)  = RB / (R1 + 2 * RB)`
-
-`Output waveform duty cycle = t1 / (t0 + t1)  = 1 - (R2 / (R1 + 2R2))`
-
-`low to high ratio = t0 / t1 = R2 / (R1 + R2)`
-
+```
+Output driver duty cycle = t0 / ( t1 + t0)  = RB / (R1 + 2 * RB)
+Output waveform duty cycle = t1 / (t0 + t1)  = 1 - (R2 / (R1 + 2R2))
+low to high ratio = t0 / t1 = R2 / (R1 + R2)
+```
 
 figure 2 showing the charge and discharge of the external capacitor C between 1/3Vcc cursor a and 2/3Vccc cursor b
 
