@@ -194,7 +194,7 @@ the transistor is now open forcing the capacitor to charge again through R1 & R2
 `Output waveform duty cycle = t1 / (t0 + t1)  = 1 - (R2 / (R1 + 2R2))`
 
 `low to high ratio = t0 / t1 = R2 / (R1 + R2)`
-```
+
 
 figure 2 showing the charge and discharge of the external capacitor C between 1/3Vcc cursor a and 2/3Vccc cursor b
 
