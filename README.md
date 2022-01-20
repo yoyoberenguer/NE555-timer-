@@ -190,7 +190,9 @@ the transistor is now open forcing the capacitor to charge again through R1 & R2
 
 
 `Output driver duty cycle = t0 / ( t1 + t0)  = RB / (R1 + 2 * RB)`
+
 `Output waveform duty cycle = t1 / (t0 + t1)  = 1 - (R2 / (R1 + 2R2))`
+
 `low to high ratio = t0 / t1 = R2 / (R1 + R2)`
 ```
 
