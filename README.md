@@ -13,7 +13,8 @@ Hans R. Camenzind, designed the first 555 timer IC in 1971, under an American co
 
 It is this design work of his, that is most prominent in Hans’s distinguished career in the field of Integrated Circuit technology.
 In the summer of 1971,  first design was reviewed, that used a constant current source and had 9 pins. 
-After the review was passed, Hans thought of a new idea of replacing the constant current source by a direct resistance.
+After the review was passed, Hans thought of a new idea of replacing the constant current source by a direct resistance.![chart8](https://user-images.githubusercontent.com/38462796/150395637-22694f26-e13c-4b2e-a9c5-cbd4de2347d0.png)
+
 This reduced the number of pins from 9 to 8, and enabled the chip to be fit in an 8 pin package instead of a 14 pin package.
 This new design was passed in the review in October 1971. 
 
@@ -76,10 +77,14 @@ The input current going through the AOP AS358 is negligeable (maximun few nA, ty
 Consequently, the current passing through R1, R2, R3 is the same. 
 The voltage applied on the pin 5 and to pin 2 can be determine as follow: 
 
+`Voltage on pin 5`
+
 ![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart1.png)
 
 `The voltage on pin 2 is` 
+
 ![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart2.png)
+
 * (v+ voltage on pin 5 and v- voltage on pin 2) and VCC = 5V
 
 These two voltages are used for controling the external capacitor C operating voltage range
@@ -166,29 +171,27 @@ exponentially decreasing until reaching the potential 1/3 Vcc.
 When Uc pass below 1/3 Vcc the Comparator U1B is triggering the RS flip-flop with the output voltage not Q set to low and 
 the transistor is now open forcing the capacitor to charge again through R1 & R2 and so on. 
 
-```
-C is charging through R1 & R2 and τ = C(R1 + R2) 
 
-2/3 * Vcc = Vcc * (1 - exp(-t0/τ)) 
-t0 = -τ * ln(1/2) = τ * 0.7
+`C is charging through R1 & R2 and τ = C(R1 + R2)`
 
-C is disharging through R2 and τ = R2.C
-1/3 * Vcc = 2/3 * Vcc * exp(-t1/τ) 
-t1 = -τ * ln(1/2) = τ * 0.7
+![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart3.png)
 
-T = t0 + t1  
-T = 0.7 * C * (R1+R2) + 0.7 * R2C 
-T = 0.7 * (R1 + 2 * R2)* C
+![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart4.png)
 
-frequency = 1 / T 
-frequency = 1.0 / (0.7 * (R1 + 2 * R2) * C ) 
-or 
-frequency = 1.44 / ((R1 + 2 * R2) * C)
+`C is disharging through R2 and τ = R2.C`
+
+![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart5.png)
+
+![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart8.png)
+
+![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart6.png)
+
+![equation 1](https://github.com/yoyoberenguer/NE555-timer-/blob/main/chart7.png)
 
 
-Output driver duty cycle = t0 / ( t1 + t0)  = RB / (R1 + 2 * RB)
-Output waveform duty cycle = t1 / (t0 + t1)  = 1 - (R2 / (R1 + 2R2))
-low to high ratio = t0 / t1 = R2 / (R1 + R2)
+`Output driver duty cycle = t0 / ( t1 + t0)  = RB / (R1 + 2 * RB)`
+`Output waveform duty cycle = t1 / (t0 + t1)  = 1 - (R2 / (R1 + 2R2))`
+`low to high ratio = t0 / t1 = R2 / (R1 + R2)`
 ```
 
 figure 2 showing the charge and discharge of the external capacitor C between 1/3Vcc cursor a and 2/3Vccc cursor b
