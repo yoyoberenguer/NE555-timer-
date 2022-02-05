@@ -254,3 +254,8 @@ As you can see the duty cycle is directly proportional to R1 & R2
 The schema below propose a duty cycle of 50% (TL = TH)
 
 ![External C charge and discharge](https://github.com/yoyoberenguer/NE555-timer-/blob/main/DutyCycle50.gif)
+
+![External C charge and discharge](https://github.com/yoyoberenguer/NE555-timer-/blob/main/waveforms-tim58.gif)
+
+
+
