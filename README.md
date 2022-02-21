@@ -13,7 +13,7 @@ Hans R. Camenzind, designed the first 555 timer IC in 1971, under an American co
 
 It is this design work of his, that is most prominent in Hans’s distinguished career in the field of Integrated Circuit technology.
 In the summer of 1971,  first design was reviewed, that used a constant current source and had 9 pins. 
-After the review was passed, Hans thought of a new idea of replacing the constant current source by a direct resistance.![chart8](https://user-images.githubusercontent.com/38462796/150395637-22694f26-e13c-4b2e-a9c5-cbd4de2347d0.png)
+After the review was passed, Hans thought of a new idea of replacing the constant current source by a direct resistance.
 
 This reduced the number of pins from 9 to 8, and enabled the chip to be fit in an 8 pin package instead of a 14 pin package.
 This new design was passed in the review in October 1971. 
